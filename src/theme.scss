@@ -1,2 +1,30 @@
 /* Global colors */
 $primary-color: #3f51b5;
+
+.dark-theme {
+  background-color: #31343f;
+  color: #fff;
+
+  mat-card,
+  .mat-stepper-horizontal,
+  .mat-stepper-vertical {
+    background-color: #262831 !important;
+    color: inherit;
+  }
+
+  .mat-horizontal-stepper-header-container {  
+    mat-step-header {
+      .mat-step-icon-state-number:not(.mat-step-icon-selected),
+      .mat-step-icon:not(.mat-step-icon-selected) {
+        background-color: #fff !important;
+        color: #000;
+      }
+    }  
+  }
+
+  .footerLinks {
+    a {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+  }
+}
