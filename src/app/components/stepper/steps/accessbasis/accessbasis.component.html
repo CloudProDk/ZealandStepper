@@ -1,0 +1,69 @@
+<div class="container">
+  <h3 class="containerHeader">Access basis</h3>
+  <p class="containerText">
+    The access basis needs to be filled out before you can apply. When you have
+    sent your application you no longer have the choice to edit "Your
+    information" or "Access basis".
+  </p>
+</div>
+<button class="diplomasBtn" mat-raised-button color="primary">
+  See your diplomas
+</button>
+
+<div>
+  <mat-grid-list cols="6" rowHeight="4rem">
+    <mat-grid-tile class="gridTile">
+      <label>Access basis type</label>
+    </mat-grid-tile>
+    <mat-grid-tile class="gridTile">
+      <mat-form-field class="selectOption">
+        <mat-label>Type</mat-label>
+        <mat-select>
+          <mat-option
+            *ngFor="let accessBasisType of accessBasisTypes"
+            [value]="accessBasisType"
+          >
+            {{ accessBasisType }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field></mat-grid-tile
+    >
+  </mat-grid-list>
+</div>
+<div>
+  <mat-grid-list cols="6" rowHeight="4rem">
+    <mat-grid-tile class="gridTile">
+      <label>Access basis</label>
+    </mat-grid-tile>
+    <mat-grid-tile class="gridTile">
+      <mat-form-field class="selectOption">
+        <mat-label>Basis</mat-label>
+        <mat-select>
+          <mat-option
+            *ngFor="let accessBasis of accessBasises"
+            [value]="accessBasis"
+          >
+            {{ accessBasis }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div>
+  <mat-grid-list cols="6" rowHeight="4rem">
+    <mat-grid-tile class="gridTile">
+      <label>Graduation year</label>
+    </mat-grid-tile>
+    <mat-grid-tile class="gridTile">
+      <mat-form-field class="selectOption">
+        <mat-label>Year</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let year of years" [value]="year">
+            {{ year }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field></mat-grid-tile
+    >
+  </mat-grid-list>
+</div>
