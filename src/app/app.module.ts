@@ -13,6 +13,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalinformationComponent } from './components/stepper/steps/personalinformation/personalinformation.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material';
 
 
 
@@ -32,7 +34,9 @@ import { PersonalinformationComponent } from './components/stepper/steps/persona
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
