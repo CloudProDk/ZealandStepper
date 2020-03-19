@@ -15,6 +15,9 @@ export class PersonalinformationComponent implements OnInit {
 
       this.form = fb.group({
           cpr: ['', Validators.required ],
+          firstname: ['', Validators.required],
+          lastname: ['', Validators.required],
+          email: ['', Validators.required]
       });
   }
   ngOnInit() {}

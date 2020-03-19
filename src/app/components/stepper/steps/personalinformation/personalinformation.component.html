@@ -1,20 +1,48 @@
-
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>
-        <form [formGroup]="form" (ngSubmit)="next()">
-            <div class="form-group">
+<mat-grid-list cols="2" rowHeight="5:1">
+    <form [formGroup]="form" (ngSubmit)="next()">
+        <mat-grid-tile [colspan]="2">
+            <!-- CPR field -->
                 <mat-form-field>
-                    
                     <mat-label>CPR</mat-label>
                     <input matInput type="text" class="form-control" formControlName="cpr">
-                    
                     <mat-error *ngIf="form.controls.cpr.touched && !form.controls.cpr.valid">
                         CPR is <strong>required</strong>
                     </mat-error>
-
                 </mat-form-field>
-            </div>
-        </form>
-    </mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-  </mat-grid-list>
+        </mat-grid-tile>
+        <mat-grid-tile>
+             <!-- Firstname field -->
+            <mat-form-field>
+                <mat-label>First name</mat-label>
+                <input matInput type="text" class="form-control" formControlName="firstname">
+
+                <mat-error *ngIf="form.controls.firstname.touched && !form.controls.firstname.valid">
+                    First name is <strong>required</strong>
+                </mat-error>
+
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <!-- Last name field -->
+                <mat-form-field>
+                    <mat-label>Last name</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="lastname">
+                    <mat-error *ngIf="form.controls.lastname.touched && !form.controls.lastname.valid">
+                        Last name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+             <!-- Email field -->
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="text" class="form-control" formControlName="email">
+
+                <mat-error *ngIf="form.controls.email.touched && !form.controls.email.valid">
+                    Email is <strong>required</strong>
+                </mat-error>
+
+            </mat-form-field>
+        </mat-grid-tile>
+    </form>
+</mat-grid-list>
