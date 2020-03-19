@@ -4,8 +4,8 @@
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Fill out your name</ng-template>
             <app-personalinformation></app-personalinformation>
-            <div>
-                <button mat-button matStepperNext>Next</button>
+            <div class="formActions">
+                <button mat-flat-button color="primary" matStepperNext>Next</button>
             </div>
         </form>
     </mat-step>
@@ -14,9 +14,9 @@
         <form [formGroup]="secondFormGroup">
             <ng-template matStepLabel>Fill out your address</ng-template>
 
-            <div>
+            <div class="formActions">
                 <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
+                <button mat-flat-button color="primary" matStepperNext>Next</button>
             </div>
         </form>
     </mat-step>
@@ -24,9 +24,9 @@
     <mat-step>
         <ng-template matStepLabel>Done</ng-template>
         <p>You are now done.</p>
-        <div>
+        <div class="formActions">
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>
         </div>
     </mat-step>
 </mat-horizontal-stepper>

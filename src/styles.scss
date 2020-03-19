@@ -1,4 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import './theme.scss';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f2f6fa;
+  padding: 150px;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container.filled {
+  .mat-horizontal-stepper-header-container {
+    background-color: $primary-color;
+    color: #fff;
+  
+    .mat-stepper-horizontal-line {
+      border-top-color: rgba(255, 255, 255, 0.15) !important;
+      z-index: 0;
+    }
+  
+    mat-step-header {
+      .mat-step-icon-state-number {
+        background-color: transparent !important;
+      }
+    
+      .mat-step-label {
+        color: inherit !important;
+      }
+    
+      &:hover {
+        background-color: rgba(lighten($primary-color, 4), 0.5) !important;
+      }
+    }  
+  }
+}
+
+mat-form-field {
+  margin-right: 12px;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.double-width {
+    width: calc(180px * 2 + 12px);
+  }
+}
