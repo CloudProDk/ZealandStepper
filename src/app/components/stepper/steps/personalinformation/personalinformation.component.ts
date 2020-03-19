@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-personalinformation',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalinformationComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
 
-  ngOnInit() {
+  constructor(fb: FormBuilder) {
+
+      this.form = fb.group({
+          cpr: ['', Validators.required ],
+      });
   }
+  ngOnInit() {}
+
+
 
 }

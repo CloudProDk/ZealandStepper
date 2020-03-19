@@ -1,1 +1,19 @@
-<p>personalinformation works!</p>
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <form [formGroup]="form" (ngSubmit)="next()">
+            <div class="form-group">
+                <mat-form-field>
+                    
+                    <mat-label>CPR</mat-label>
+                    <input matInput type="text" class="form-control" formControlName="cpr">
+                    
+                    <mat-error *ngIf="form.controls.cpr.touched && !form.controls.cpr.valid">
+                        CPR is <strong>required</strong>
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+  </mat-grid-list>

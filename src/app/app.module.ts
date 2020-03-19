@@ -11,6 +11,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalinformationComponent } from './components/stepper/steps/personalinformation/personalinformation.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material';
 
 
 
@@ -28,7 +30,9 @@ import { PersonalinformationComponent } from './components/stepper/steps/persona
     MatCardModule,
     MatStepperModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
