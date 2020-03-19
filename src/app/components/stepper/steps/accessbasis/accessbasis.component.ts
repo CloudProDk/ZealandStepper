@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-accessbasis",
@@ -6,6 +7,10 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./accessbasis.component.scss"]
 })
 export class AccessbasisComponent implements OnInit {
+  accessBasisControl = new FormControl("", Validators.required);
+  accessBasisTypeControl = new FormControl("", Validators.required);
+  yearControl = new FormControl("", Validators.required);
+
   accessBasisTypes: string[] = [
     "Dansk gymnasial eksamen",
     "Dansk handelsskole eksamen"
