@@ -8,6 +8,8 @@ import { StepperComponent } from './components/stepper/stepper.component';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalinformationComponent } from './components/stepper/steps/personalinformation/personalinformation.component';
@@ -27,6 +29,8 @@ import { PersonalinformationComponent } from './components/stepper/steps/persona
     BrowserAnimationsModule,
     MatCardModule,
     MatStepperModule,
+    MatButtonModule,
+    MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule
   ],
