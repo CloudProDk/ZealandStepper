@@ -1,23 +1,17 @@
 .container {
-  border: solid;
-  border-color: black;
-  border-width: 0.5px;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
 .containerHeader {
-  margin-left: 1rem;
   margin-right: 1rem;
 }
 .containerText {
-  margin-left: 1rem;
   margin-right: 1rem;
 }
 .diplomasBtn {
   margin-bottom: 2rem;
 }
 .selectOption {
-  margin-left: 2rem;
 }
 .gridTile > ::ng-deep figure {
   justify-content: flex-start !important;
