@@ -1,0 +1,46 @@
+.inline-row{
+    display: flex;
+}
+
+.icon{
+    margin-left: 4rem;
+    align-self: center;
+
+}
+
+.error{
+    color: #da0f0f;
+}
+
+.success{
+    color: greenyellow;
+    text-align: right;
+    margin-right: 4rem;
+}
+
+.loading-1{
+    align-self: center;
+    margin-left: 4rem;
+}
+
+.loading-2{
+    align-self: center;
+    margin-left: 5rem;
+}
+
+.loading-3{
+    align-self: center;
+    margin-left: 3rem;
+}
+
+.formActions {
+    text-align: right;
+  
+    button:not(:last-of-type) {
+      margin-right: 8px;
+    }
+  }
+
+  ::ng-deep .dark-theme .mat-progress-bar-buffer {
+    background-color: #f1f1f1 !important;
+  }

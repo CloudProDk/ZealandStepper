@@ -1,0 +1,27 @@
+<div class="container">
+    <h3 class="containerHeader">Upload you application</h3>
+    <p> Now you have filled out all the nescessary forms. Please click upload in order to submit your application </p>
+</div>
+
+<div fxLayout="row">
+    <div fxLayout="row" class="inline-row">
+        <p>Your information</p>
+        <mat-progress-bar class="loading-1"*ngIf="uploading1" mode="indeterminate"></mat-progress-bar>
+        <mat-icon *ngIf="ready1" class="icon success">check_circle_outline</mat-icon>
+    </div>
+    <div fxLayout="row" class="inline-row">
+        <p>Access basis</p>
+        <mat-progress-bar class="loading-2" *ngIf="uploading2" mode="indeterminate"></mat-progress-bar>
+        <mat-icon *ngIf="ready2" class="icon success">check_circle_outline</mat-icon>
+    </div>
+    <div fxLayout="row" class="inline-row">
+        <p>Educational choice</p>
+        <mat-progress-bar class="loading-3" *ngIf="uploading3" mode="indeterminate"></mat-progress-bar>
+        <mat-icon *ngIf="ready3" class="icon success">check_circle_outline</mat-icon>
+    </div>
+</div>
+<div class="formActions">
+    <button *ngIf="readyUpload" mat-button matStepperPrevious>cancel</button>
+    <button *ngIf="readyUpload" mat-flat-button color="primary" (click)="upload()">Upload</button>
+    <button *ngIf="ready" mat-flat-button color="primary" matStepperNext>Finish</button>
+  </div>
