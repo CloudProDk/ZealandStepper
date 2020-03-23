@@ -10,7 +10,7 @@
   <div>
     <mat-form-field class="selectOption double-width">
       <mat-label>Type</mat-label>
-      <mat-select class="form-control" formControlName="basis" required>
+      <mat-select formControlName="basis" required>
         <mat-option
           *ngFor="let accessBasisType of accessBasisTypes"
           [value]="accessBasisType"
@@ -26,7 +26,7 @@
   <div>
     <mat-form-field class="selectOption double-width">
       <mat-label>Basis</mat-label>
-      <mat-select class="form-control" formControlName="type" required>
+      <mat-select formControlName="type" required>
         <mat-option
           *ngFor="let accessBasis of accessBasises"
           [value]="accessBasis"
@@ -42,7 +42,7 @@
   <div>
     <mat-form-field class="selectOption double-width">
       <mat-label>Year</mat-label>
-      <mat-select class="form-control" formControlName="year" required>
+      <mat-select formControlName="year" required>
         <mat-option *ngFor="let year of years" [value]="year">
           {{ year }}
         </mat-option>
