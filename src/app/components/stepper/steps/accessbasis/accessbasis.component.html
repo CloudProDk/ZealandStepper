@@ -8,7 +8,7 @@
 </div>
 <div>
   <mat-form-field class="selectOption double-width">
-    <mat-label>Access basis type</mat-label>
+    <mat-label>Type</mat-label>
     <mat-select [formControl]="accessBasisTypeControl" required>
       <mat-option
         *ngFor="let accessBasisType of accessBasisTypes"
@@ -17,9 +17,9 @@
         {{ accessBasisType }}
       </mat-option>
     </mat-select>
-    <mat-error *ngIf="accessBasisTypeControl.hasError('required')"
-      >Please choose a type</mat-error
-    >
+    <mat-error *ngIf="accessBasisTypeControl.hasError('required')">
+      Type is <strong>required</strong>
+    </mat-error>
   </mat-form-field>
 </div>
 <div>
@@ -33,9 +33,9 @@
         {{ accessBasis }}
       </mat-option>
     </mat-select>
-    <mat-error *ngIf="accessBasisControl.hasError('required')"
-      >Please choose a basis</mat-error
-    >
+    <mat-error *ngIf="accessBasisControl.hasError('required')">
+      Basis is <strong>required</strong>
+    </mat-error>
   </mat-form-field>
 </div>
 <div>
@@ -46,8 +46,8 @@
         {{ year }}
       </mat-option>
     </mat-select>
-    <mat-error *ngIf="yearControl.hasError('required')"
-      >Please choose a year</mat-error
-    >
+    <mat-error *ngIf="yearControl.hasError('required')">
+      Year is <strong>required</strong>
+    </mat-error>
   </mat-form-field>
 </div>
