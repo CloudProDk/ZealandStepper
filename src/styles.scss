@@ -23,6 +23,7 @@ body {
     }
   
     mat-step-header {
+
       .mat-step-icon-state-number {
         background-color: transparent !important;
       }
@@ -47,6 +48,27 @@ mat-form-field {
 
   &.double-width {
     width: calc(180px * 2 + 12px);
+  }
+}
+
+.container {
+  .header {
+    div {
+      display: inline-block;
+
+      &.dark-theme-toggle {
+        float: right;
+        margin-top: 18px;
+
+        span {
+          cursor: pointer;
+          padding: 12px;
+          margin-right: -12px;
+          border-radius: 50%;
+          user-select: none;
+        }
+      }
+    }
   }
 }
 

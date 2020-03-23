@@ -16,21 +16,9 @@ import { PersonalinformationComponent } from './components/stepper/steps/persona
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { StepperComponent } from "./components/stepper/stepper.component";
-
-import { MatCardModule } from "@angular/material/card";
-import { MatStepperModule } from "@angular/material/stepper";
-import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
-import { MatButtonModule } from "@angular/material/button";
-import { MatInputModule } from "@angular/material/input";
-import { MatGridListModule } from "@angular/material/grid-list";
-import { ReactiveFormsModule } from "@angular/forms";
-import { PersonalinformationComponent } from "./components/stepper/steps/personalinformation/personalinformation.component";
 import { AccessbasisComponent } from "./components/stepper/steps/accessbasis/accessbasis.component";
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -51,9 +39,12 @@ import { AccessbasisComponent } from "./components/stepper/steps/accessbasis/acc
     MatSelectModule,
     MatButtonModule,
     MatGridListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  public isDarkThemeOn = true;
+}

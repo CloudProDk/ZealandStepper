@@ -1,6 +1,12 @@
-<div class="container ~filled">
-  <h1>Optagelse.dk</h1>
-
+<div class="container">
+  <div class="header">
+    <div>
+      <h1>Optagelse.dk</h1>
+    </div>
+    <div class="dark-theme-toggle">
+      <span matRipple matRippleCentered (click)="toggleTheme()" class="material-icons">{{ isDarkThemeOn == true ? 'wb_sunny' : 'brightness_2' }}</span>
+    </div>
+  </div>
   <mat-card>
     <router-outlet></router-outlet>
   </mat-card>
