@@ -12,6 +12,24 @@ body {
   box-sizing: border-box;
 }
 
+.mat-stepper-horizontal-line{
+  border-top: 0 !important;
+}
+.mat-flat-button.mat-primary{
+  color: white !important;
+}
+.mat-step-icon-selected{
+  color: white !important;
+}
+.container {
+  .mat-horizontal-stepper-header-container {
+    mat-step-header {
+      background-color: #6A6A6A;
+      border-top: solid 2px orange;
+      width: 100% !important;
+    }
+  }
+}
 .container.filled {
   .mat-horizontal-stepper-header-container {
     background-color: $primary-color;
@@ -55,7 +73,7 @@ mat-form-field {
 @include mat-core();
 
 // Dark theme
-$dark-primary: mat-palette($mat-pink, A200, A100, A400);
+$dark-primary: mat-palette($mat-deep-orange, A200, A100, A400);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $dark-warn:    mat-palette($mat-red);
 $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);

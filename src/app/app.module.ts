@@ -16,13 +16,15 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { ReactiveFormsModule } from "@angular/forms";
 import { PersonalinformationComponent } from "./components/stepper/steps/personalinformation/personalinformation.component";
 import { AccessbasisComponent } from "./components/stepper/steps/accessbasis/accessbasis.component";
+import { EducationalchoiceComponent } from './components/stepper/steps/educationalchoice/educationalchoice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StepperComponent,
     PersonalinformationComponent,
-    AccessbasisComponent
+    AccessbasisComponent,
+    EducationalchoiceComponent
   ],
   imports: [
     BrowserModule,

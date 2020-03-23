@@ -20,7 +20,16 @@
       </div>
     </form>
   </mat-step>
-  <!-- Step 3 - XXX start -->
+<!-- Step 3 - XXX start -->
+<mat-step>
+  <ng-template matStepLabel>Educational Choice</ng-template>
+  <app-Educationalchoice></app-Educationalchoice>
+  <div class="formActions">
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-flat-button color="primary" matStepperNext>Next</button>
+  </div>
+</mat-step>
+  <!-- Step 4 - XXX start -->
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     <p>You are now done.</p>
