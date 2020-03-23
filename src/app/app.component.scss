@@ -1,5 +1,8 @@
 @import '../theme.scss';
 
+.mat-card{
+  padding: 0 !important;
+}
 .container {
   width: 800px;
   margin: 0 auto;
