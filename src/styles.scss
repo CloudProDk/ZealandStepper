@@ -21,15 +21,28 @@ body {
 .mat-step-icon-selected{
   color: white !important;
 }
+.mat-step-icon{
+  justify-content: center !important;
+}
 .container {
   .mat-horizontal-stepper-header-container {
     mat-step-header {
       background-color: #6A6A6A;
-      border-top: solid 2px orange;
+      border-top: solid 2px rgb(161, 105, 0);
       width: 100% !important;
     }
   }
 }
+.container {
+  .mat-horizontal-stepper-header-container:focus {
+    mat-step-header:focus {
+      background-color: #262831;
+      border-top: solid 2px orange;
+    }
+  }
+}
+
+
 .container.filled {
   .mat-horizontal-stepper-header-container {
     background-color: $primary-color;
