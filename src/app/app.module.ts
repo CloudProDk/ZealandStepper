@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { PersonalinformationComponent } from "./components/stepper/steps/personalinformation/personalinformation.component";
 import { AccessbasisComponent } from "./components/stepper/steps/accessbasis/accessbasis.component";
 import { EducationalchoiceComponent } from './components/stepper/steps/educationalchoice/educationalchoice.component';
+import { DoneComponent } from './components/stepper/steps/done/done.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EducationalchoiceComponent } from './components/stepper/steps/education
     StepperComponent,
     PersonalinformationComponent,
     AccessbasisComponent,
-    EducationalchoiceComponent
+    EducationalchoiceComponent,
+    DoneComponent
   ],
   imports: [
     BrowserModule,
