@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="formActions">
-    <button *ngIf="readyUpload" mat-button matStepperPrevious>cancel</button>
+    <button *ngIf="readyUpload || ready" mat-button matStepperPrevious>Back</button>
     <button *ngIf="readyUpload" mat-flat-button color="primary" (click)="upload()">Upload</button>
-    <button *ngIf="ready" mat-flat-button color="primary" matStepperNext>Finish</button>
+    <button *ngIf="ready" mat-flat-button color="primary" matStepperNext>Submit application</button>
   </div>
