@@ -13,19 +13,27 @@ export class EducationalchoiceComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
 
-      this.form = fb.group({
-          cpr: ['', Validators.required ],
-          city: ['', Validators.required ],
-          firstname: ['', Validators.required],
-          lastname: ['', Validators.required],
-          email: ['', Validators.required],
-          zip: ['', Validators.required],
-          street: ['', Validators.required],
-          phone: ['', Validators.required],
-      });
   }
+
+  taskTypeAreas: {
+    name: string;
+  }[] = [
+    {
+      name: 'PBA Web Development'
+    },
+    {
+      name: 'PBA Software Development'
+    },
+    {
+      name: 'Computer Science'
+    },
+  ];
+  selectedOptions: string[] = ['Computer Science'];
+
   ngOnInit() {}
 
-
+  onNgModelChange(event){
+    console.log('on ng model change', event);
+  }
 
 }

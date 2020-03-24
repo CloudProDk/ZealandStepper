@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ZealandStepper';
+  isDarkThemeOn = false;
+
+  toggleTheme() {
+    this.isDarkThemeOn = !this.isDarkThemeOn;
+    document.body.classList.toggle('dark-theme');
+  }
 }

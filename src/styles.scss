@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import './theme.scss';
+// Imports for Angular Material Theming
+@import '~@angular/material/theming';
+@include mat-core();
 
 html, body { height: 100%; }
 body {
@@ -21,15 +24,29 @@ body {
 .mat-step-icon-selected{
   color: white !important;
 }
+.mat-step-icon{
+  justify-content: center !important;
+}
 .container {
   .mat-horizontal-stepper-header-container {
     mat-step-header {
-      background-color: #6A6A6A;
-      border-top: solid 2px orange;
+      background-color:rgba(106, 106, 106, 0.1);
+      border-top: solid 2px $primary-color;
       width: 100% !important;
     }
   }
 }
+
+.dark-theme .container {
+  .mat-horizontal-stepper-header-container {
+    mat-step-header {
+      border-top: solid 2px #ff6e40;
+    }
+  }
+}
+
+
+
 .container.filled {
   .mat-horizontal-stepper-header-container {
     background-color: $primary-color;
@@ -41,6 +58,7 @@ body {
     }
   
     mat-step-header {
+
       .mat-step-icon-state-number {
         background-color: transparent !important;
       }
@@ -70,9 +88,26 @@ mat-form-field {
   }
 }
 
-// Imports for Angular Material Theming
-@import '~@angular/material/theming';
-@include mat-core();
+.container {
+  .header {
+    div {
+      display: inline-block;
+
+      &.dark-theme-toggle {
+        float: right;
+        margin-top: 18px;
+
+        span {
+          cursor: pointer;
+          padding: 12px;
+          margin-right: -12px;
+          border-radius: 50%;
+          user-select: none;
+        }
+      }
+    }
+  }
+}
 
 // Dark theme
 $dark-primary: mat-palette($mat-deep-orange, A200, A100, A400);
