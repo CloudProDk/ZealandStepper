@@ -10,10 +10,7 @@ import { StepperComponent } from './components/stepper/stepper.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalinformationComponent } from './components/stepper/steps/personalinformation/personalinformation.component';
 
@@ -21,7 +18,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material';
 
 import { MatSelectModule } from "@angular/material/select";
-import { AccessbasisComponent } from "./components/stepper/steps/accessbasis/accessbasis.component";
 import {MatRippleModule} from '@angular/material/core';
 
 import { AccessbasisComponent } from './components/stepper/steps/accessbasis/accessbasis.component';
