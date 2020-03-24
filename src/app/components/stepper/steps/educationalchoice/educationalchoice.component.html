@@ -1,40 +1,12 @@
 <div class="container">
-  <h3 class="containerHeader">Your Information</h3>
+  <h3 class="containerHeader">Education Choice</h3>
   <p class="containerText">
-    Fill out the informations so the education institution can contact you if necessary.
-    If you are loggen in with NemID you don't need to fill in the informations.
+    Educational choice
+    <br>
+    Add up to 8 applications to your prioritylist. Don't forget to sign them all!
+    <br>
+    <br>
+    <br>
+    Add education to your prioritylist
   </p>
 </div>
-<mat-grid-list cols="4" rowHeight="2.5:1">
-    <form [formGroup]="form" (ngSubmit)="next()">
-        <mat-grid-tile class="gridTile" [colspan]="2">
-            <!-- CPR field -->
-                <mat-form-field class="full-width">
-                    <mat-label>CPR</mat-label>
-                    <input matInput type="text" class="form-control" formControlName="cpr">
-                    <mat-error *ngIf="form.controls.cpr.touched && !form.controls.cpr.valid">
-                        CPR is <strong>required</strong>
-                    </mat-error>
-                    <mat-error *ngIf="form.controls.cpr.touched && !form.controls.cpr.value?.length > 1">
-                        CPR is <strong>Wrong</strong>
-                    </mat-error>
-                </mat-form-field>
-        </mat-grid-tile>
-           </mat-form-field>
-       </mat-grid-tile>
-        <mat-grid-tile [colspan]="2">
-            <!--List of educations-->
-            <mat-form-field class="full-width">
-                <mat-selection-list #shoes>
-                    <mat-list-option *ngFor="let shoe of typesOfshoe">
-                    {{shoe}}
-                    </mat-list-option>
-                </mat-selection-list>
-                <p>
-                    selected: {{shoes.selectedOptions.selected.length}}
-                </p>
-            </mat-form-field>
-        </mat-grid-tile>
-
-    </form>
-</mat-grid-list>
