@@ -2,7 +2,7 @@
   <!-- Step 1 - Personal Information start -->
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>You Information</ng-template>
+      <ng-template matStepLabel>Your Information</ng-template>
       <app-personalinformation></app-personalinformation>
       <div class="formActions">
         <button mat-flat-button color="primary" matStepperNext>Next</button>
@@ -20,19 +20,25 @@
       </div>
     </form>
   </mat-step>
-<!-- Step 3 - XXX start -->
-<mat-step>
-  <ng-template matStepLabel>Educational Choice</ng-template>
-  <app-Educationalchoice></app-Educationalchoice>
-  <div class="formActions">
-    <button mat-button matStepperPrevious>Back</button>
-    <button mat-flat-button color="primary" matStepperNext>Next</button>
-  </div>
-</mat-step>
-  <!-- Step 4 - XXX start -->
+  <!-- Step 3 - Choose education start -->
+  <mat-step>
+    <ng-template matStepLabel>Educational Choice</ng-template>
+    <app-Educationalchoice></app-Educationalchoice>
+    <div class="formActions">
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-flat-button color="primary" matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <!-- Step 4 - Upload start -->
+  <mat-step>
+    <ng-template matStepLabel>Upload</ng-template>
+    <app-upload></app-upload>
+    
+  </mat-step>
+  <!-- Step 5 - Done start -->
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <app-done></app-done>
     <div class="formActions">
       <button mat-button matStepperPrevious>Back</button>
       <button mat-flat-button color="primary" (click)="stepper.reset()">
