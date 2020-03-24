@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-accessbasis",
@@ -6,11 +7,22 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./accessbasis.component.scss"]
 })
 export class AccessbasisComponent implements OnInit {
+  form: FormGroup;
+
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      basis: ["", Validators.required],
+      type: ["", Validators.required],
+      year: ["", Validators.required]
+    });
+  }
+
   accessBasisTypes: string[] = [
     "Dansk gymnasial eksamen",
-    "Dansk handelsskole eksamen"
+    "Dansk handelsskole eksamen",
+    "Dansk teknisk eksamen"
   ];
-  accessBasises: string[] = ["STX", "HHX"];
+  accessBasises: string[] = ["STX", "HHX", "HTX"];
   years: string[] = [
     "2000",
     "2001",
@@ -34,7 +46,6 @@ export class AccessbasisComponent implements OnInit {
     "2019",
     "2020"
   ];
-  constructor() {}
 
   ngOnInit() {}
 }

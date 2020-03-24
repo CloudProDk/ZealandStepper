@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 class="containerHeader">Education Choice</h3>
+  <p class="containerText">
+
+    <br>
+    <br>
+    <br>
+    Add education to your prioritylist
+  </p>
+</div>
+
+<p>
+    Primary Choice
+</p>
+  <mat-form-field class="full-width">
+  <mat-select>
+      <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
+        {{tta.name}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>
+    Secondary Choice
+</p>
+  <mat-form-field class="full-width">
+  <mat-select>
+      <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
+        {{tta.name}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
