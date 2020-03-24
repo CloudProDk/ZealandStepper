@@ -1,32 +1,31 @@
 <div class="container">
   <h3 class="containerHeader">Education Choice</h3>
   <p class="containerText">
-
-    <br>
-    <br>
-    <br>
-    Add education to your prioritylist
+    Add educations to your prioritylist.
   </p>
 </div>
-
-<p>
-    Primary Choice
-</p>
-  <mat-form-field class="full-width">
-  <mat-select>
-      <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
-        {{tta.name}}
-      </mat-option>
-  </mat-select>
-</mat-form-field>
-
-<p>
-    Secondary Choice
-</p>
-  <mat-form-field class="full-width">
-  <mat-select>
-      <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
-        {{tta.name}}
-      </mat-option>
-  </mat-select>
-</mat-form-field>
+<form [formGroup]="form" (ngSubmit)="next()">
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label> Primary Choice </mat-label>
+      <mat-select formControlName="primary" required>
+        <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
+          {{ tta.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.controls.primary.hasError('required')">
+        Primary choice<strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label> Secondary Choice </mat-label>
+      <mat-select>
+        <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
+          {{ tta.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
