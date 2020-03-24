@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { interval } from 'rxjs';
 
+ 
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
@@ -23,7 +24,9 @@ export class UploadComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  /**
+  * Method to simulate upload
+  */
   async upload() {
     this.readyUpload = false;
     this.uploading1 = true;
