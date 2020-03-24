@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import './theme.scss';
+// Imports for Angular Material Theming
+@import '~@angular/material/theming';
+@include mat-core();
 
 html, body { height: 100%; }
 body {
@@ -27,9 +30,17 @@ body {
 .container {
   .mat-horizontal-stepper-header-container {
     mat-step-header {
-      background-color:rgba(106, 106, 106, 0.5);
-      border-top: solid 2px rgb(161, 105, 0);
+      background-color:rgba(106, 106, 106, 0.1);
+      border-top: solid 2px $primary-color;
       width: 100% !important;
+    }
+  }
+}
+
+.dark-theme .container {
+  .mat-horizontal-stepper-header-container {
+    mat-step-header {
+      border-top: solid 2px #ff6e40;
     }
   }
 }
@@ -97,10 +108,6 @@ mat-form-field {
     }
   }
 }
-
-// Imports for Angular Material Theming
-@import '~@angular/material/theming';
-@include mat-core();
 
 // Dark theme
 $dark-primary: mat-palette($mat-deep-orange, A200, A100, A400);
