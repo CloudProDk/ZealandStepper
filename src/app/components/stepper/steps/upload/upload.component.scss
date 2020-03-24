@@ -1,46 +1,26 @@
-.inline-row{
-    display: flex;
+.inline-row {
+  display: flex;
 }
 
-.icon{
-    margin-left: 4rem;
-    align-self: center;
-
+.error {
+  color: #da0f0f;
 }
 
-.error{
-    color: #da0f0f;
-}
-
-.success{
-    color: greenyellow;
-    text-align: right;
-    margin-right: 4rem;
-}
-
-.loading-1{
-    align-self: center;
-    margin-left: 4rem;
-}
-
-.loading-2{
-    align-self: center;
-    margin-left: 5rem;
-}
-
-.loading-3{
-    align-self: center;
-    margin-left: 3rem;
+.success {
+  color: greenyellow;
 }
 
 .formActions {
-    text-align: right;
-  
-    button:not(:last-of-type) {
-      margin-right: 8px;
-    }
-  }
+  text-align: right;
 
-  ::ng-deep .dark-theme .mat-progress-bar-buffer {
-    background-color: #f1f1f1 !important;
+  button:not(:last-of-type) {
+    margin-right: 8px;
   }
+}
+
+::ng-deep .dark-theme .mat-progress-bar-buffer {
+  background-color: #f1f1f1 !important;
+}
+.gridTile > ::ng-deep figure {
+  justify-content: flex-start !important;
+}

@@ -1,25 +1,48 @@
 <div class="container">
-    <h3 class="containerHeader">Upload you application</h3>
-    <p> Now you have filled out all the nescessary forms. Please click upload in order to submit your application </p>
+  <h3 class="containerHeader">Upload you application</h3>
+  <p>
+    Now you have filled out all the nescessary forms. Please click upload in
+    order to submit your application
+  </p>
 </div>
 
-<div fxLayout="row">
-    <div fxLayout="row" class="inline-row">
-        <p>Your information</p>
-        <mat-progress-bar class="loading-1"*ngIf="uploading1" mode="indeterminate"></mat-progress-bar>
-        <mat-icon *ngIf="ready1" class="icon success">check_circle_outline</mat-icon>
-    </div>
-    <div fxLayout="row" class="inline-row">
-        <p>Access basis</p>
-        <mat-progress-bar class="loading-2" *ngIf="uploading2" mode="indeterminate"></mat-progress-bar>
-        <mat-icon *ngIf="ready2" class="icon success">check_circle_outline</mat-icon>
-    </div>
-    <div fxLayout="row" class="inline-row">
-        <p>Educational choice</p>
-        <mat-progress-bar class="loading-3" *ngIf="uploading3" mode="indeterminate"></mat-progress-bar>
-        <mat-icon *ngIf="ready3" class="icon success">check_circle_outline</mat-icon>
-    </div>
-</div>
+<mat-grid-list cols="4" rowHeight="4rem">
+  <mat-grid-tile class="gridTile" colspan="1">
+    <p>Your information</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="gridTile" colspan="3">
+    <mat-progress-bar
+      *ngIf="uploading1"
+      mode="indeterminate"
+    ></mat-progress-bar>
+    <mat-icon *ngIf="ready1" class="success">check_circle_outline</mat-icon>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="4" rowHeight="4rem">
+  <mat-grid-tile class="gridTile" colspan="1">
+    <p>Access basis</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="gridTile" colspan="3">
+    <mat-progress-bar
+      *ngIf="uploading2"
+      mode="indeterminate"
+    ></mat-progress-bar>
+    <mat-icon *ngIf="ready2" class="success">check_circle_outline</mat-icon>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="4" rowHeight="4rem">
+  <mat-grid-tile class="gridTile" colspan="1">
+    <p>Educational choice</p>
+  </mat-grid-tile>
+  <mat-grid-tile class="gridTile" colspan="3">
+    <mat-progress-bar
+      *ngIf="uploading3"
+      mode="indeterminate"
+    ></mat-progress-bar>
+    <mat-icon *ngIf="ready3" class="success">check_circle_outline</mat-icon>
+  </mat-grid-tile>
+</mat-grid-list>
+
 <div class="formActions">
     <button *ngIf="readyUpload || ready" mat-button matStepperPrevious>Back</button>
     <button *ngIf="readyUpload" mat-flat-button color="primary" (click)="upload()">Upload</button>
