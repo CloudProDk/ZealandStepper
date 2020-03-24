@@ -14,9 +14,26 @@ export class EducationalchoiceComponent implements OnInit {
   constructor(fb: FormBuilder) {
 
   }
+
+  taskTypeAreas: {
+    name: string;
+  }[] = [
+    {
+      name: 'PBA Web Development'
+    },
+    {
+      name: 'PBA Software Development'
+    },
+    {
+      name: 'Computer Science'
+    },
+  ];
+  selectedOptions: string[] = ['Computer Science'];
+
   ngOnInit() {}
 
-}
-export class ListSelectionExample {
-  typesOfshoe: string[] = ['PBA Web Development', 'PBA Software Developmnent', 'Computer Science', 'Markering Management', 'Commerce Management'];
+  onNgModelChange(event){
+    console.log('on ng model change', event);
+  }
+
 }

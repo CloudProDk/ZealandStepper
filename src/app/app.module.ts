@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { StepperComponent } from "./components/stepper/stepper.component";
 
 import { MatCardModule } from "@angular/material/card";
+import { MatListModule } from '@angular/material/list';
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
@@ -38,7 +39,8 @@ import { EducationalchoiceComponent } from './components/stepper/steps/education
     MatSelectModule,
     MatButtonModule,
     MatGridListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
