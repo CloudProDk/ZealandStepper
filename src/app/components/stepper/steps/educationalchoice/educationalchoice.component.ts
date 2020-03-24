@@ -26,6 +26,7 @@ export class EducationalchoiceComponent implements OnInit {
   }
   ngOnInit() {}
 
-
-
+}
+export class ListSelectionExample {
+  typesOfshoe: string[] = ['PBA Web Development', 'PBA Software Developmnent', 'Computer Science', 'Markering Management', 'Commerce Management'];
 }
