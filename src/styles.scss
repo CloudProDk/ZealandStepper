@@ -21,15 +21,21 @@ body {
 .mat-step-icon-selected{
   color: white !important;
 }
+.mat-step-icon{
+  justify-content: center !important;
+}
 .container {
   .mat-horizontal-stepper-header-container {
     mat-step-header {
-      background-color: #6A6A6A;
-      border-top: solid 2px orange;
+      background-color:rgba(106, 106, 106, 0.5);
+      border-top: solid 2px rgb(161, 105, 0);
       width: 100% !important;
     }
   }
 }
+
+
+
 .container.filled {
   .mat-horizontal-stepper-header-container {
     background-color: $primary-color;

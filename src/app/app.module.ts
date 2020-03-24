@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StepperComponent } from './components/stepper/stepper.component';
 
+
 import { MatCardModule } from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,6 +17,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PersonalinformationComponent } from './components/stepper/steps/personalinformation/personalinformation.component';
 import { AccessbasisComponent } from './components/stepper/steps/accessbasis/accessbasis.component';
+import { MatListModule } from '@angular/material/list';
+
 import { EducationalchoiceComponent } from './components/stepper/steps/educationalchoice/educationalchoice.component';
 import { DoneComponent } from './components/stepper/steps/done/done.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -45,10 +48,9 @@ import { UploadComponent } from './components/stepper/steps/upload/upload.compon
     MatButtonModule,
     MatGridListModule,
     ReactiveFormsModule,
+    MatListModule,
     MatProgressBarModule,
     MatIconModule
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]

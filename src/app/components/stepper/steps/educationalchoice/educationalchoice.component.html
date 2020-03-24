@@ -1,104 +1,32 @@
 <div class="container">
-  <h3 class="containerHeader">Your Information</h3>
+  <h3 class="containerHeader">Education Choice</h3>
   <p class="containerText">
-    Fill out the informations so the education institution can contact you if necessary.
-    If you are loggen in with NemID you don't need to fill in the informations.
+
+    <br>
+    <br>
+    <br>
+    Add education to your prioritylist
   </p>
 </div>
-<mat-grid-list cols="4" rowHeight="2.5:1">
-    <form [formGroup]="form" (ngSubmit)="next()">
-        <mat-grid-tile class="gridTile" [colspan]="2">
-            <!-- CPR field -->
-                <mat-form-field class="full-width">
-                    <mat-label>CPR</mat-label>
-                    <input matInput type="text" class="form-control" formControlName="cpr">
-                    <mat-error *ngIf="form.controls.cpr.touched && !form.controls.cpr.valid">
-                        CPR is <strong>required</strong>
-                    </mat-error>
-                    <mat-error *ngIf="form.controls.cpr.touched && !form.controls.cpr.value?.length > 1">
-                        CPR is <strong>Wrong</strong>
-                    </mat-error>
-                </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile [colspan]="2">
-            <!-- Email field -->
-           <mat-form-field class="full-width">
-               <mat-label>Email</mat-label>
-               <input matInput type="text" class="form-control" formControlName="email">
 
-               <mat-error *ngIf="form.controls.email.touched && !form.controls.email.valid">
-                   Email is <strong>required</strong>
-               </mat-error>
+<p>
+    Primary Choice
+</p>
+  <mat-form-field class="full-width">
+  <mat-select>
+      <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
+        {{tta.name}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
 
-           </mat-form-field>
-       </mat-grid-tile>
-        <mat-grid-tile [colspan]="2">
-             <!-- Firstname field -->
-            <mat-form-field class="full-width">
-                <mat-label>First name</mat-label>
-                <input matInput type="text" class="form-control" formControlName="firstname">
-
-                <mat-error *ngIf="form.controls.firstname.touched && !form.controls.firstname.valid">
-                    First name is <strong>required</strong>
-                </mat-error>
-                
-
-            </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile class="gridTile" [colspan]="2">
-            <!-- Last Name field -->
-                <mat-form-field class="full-width">
-                    <mat-label>Last name</mat-label>
-                    <input matInput type="text" class="form-control" formControlName="lastname">
-                    <mat-error *ngIf="form.controls.lastname.touched && !form.controls.lastname.valid">
-                        Last name is <strong>required</strong>
-                    </mat-error>
-                </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile class="gridTile" [colspan]="2">
-            <!-- Zip -->
-                <mat-form-field class="full-width">
-                    <mat-label>Zipcode</mat-label>
-                    <input matInput type="text" class="form-control" formControlName="zip">
-                    <mat-error *ngIf="form.controls.zip.touched && !form.controls.zip.valid">
-                        Zip code is <strong>required</strong>
-                    </mat-error>
-                </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile [colspan]="2">
-            <!-- City field -->
-           <mat-form-field class="full-width">
-               <mat-label>City</mat-label>
-               <input matInput type="text" class="form-control" formControlName="city">
-
-               <mat-error *ngIf="form.controls.city.touched && !form.controls.city.valid">
-                   City is <strong>required</strong>
-               </mat-error>
-
-           </mat-form-field>
-       </mat-grid-tile>
-        <mat-grid-tile [colspan]="2">
-             <!-- Street field -->
-            <mat-form-field class="full-width">
-                <mat-label>Street</mat-label>
-                <input matInput type="text" class="form-control" formControlName="street">
-
-                <mat-error *ngIf="form.controls.street.touched && !form.controls.street.valid">
-                    Street is <strong>required</strong>
-                </mat-error>
-
-            </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile class="gridTile" [colspan]="2">
-            <!-- Phone field -->
-                <mat-form-field class="full-width">
-                    <mat-label>Phone</mat-label>
-                    <input matInput type="text" class="form-control" formControlName="phone">
-                    <mat-error *ngIf="form.controls.phone.touched && !form.controls.phone.valid">
-                        Phone is <strong>required</strong>
-                    </mat-error>
-                </mat-form-field>
-        </mat-grid-tile>
-        
-    </form>
-</mat-grid-list>
+<p>
+    Secondary Choice
+</p>
+  <mat-form-field class="full-width">
+  <mat-select>
+      <mat-option *ngFor="let tta of taskTypeAreas" [value]="tta.name">
+        {{tta.name}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
