@@ -21,6 +21,7 @@ export class UploadComponent implements OnInit {
 
   ready = false;
   readyUpload = true;
+  
   ngOnInit() {
   }
 
@@ -40,10 +41,4 @@ export class UploadComponent implements OnInit {
     interval(9000).subscribe(x => this.ready3 = true);
     interval(9000).subscribe(x => this.ready = true);
   }
-
-  
-
-
-
-
 }

@@ -25,7 +25,4 @@ export class PersonalinformationComponent implements OnInit {
       });
   }
   ngOnInit() {}
-
-
-
 }
